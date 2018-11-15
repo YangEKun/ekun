@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>layer-更懂你的web弹窗解决方案</title>
+
+  <style>
+  html{background-color:#E3E3E3; font-size:14px; color:#000; font-family:'华文楷体'}
+  a,a:hover{ text-decoration:none;}
+  pre{font-family:'华文楷体'}
+  #about_hide{display:none}
+  .layer_text{background-color:#fff; padding:20px;}
+  .layer_text p{margin-bottom: 10px; text-indent: 2em; line-height: 23px;}
+  .button{display:inline-block; *display:inline; *zoom:1; line-height:30px; padding:0 20px; background-color:#56B4DC; color:#fff; font-size:14px; border-radius:3px; cursor:pointer; font-weight:normal;}
+  .photos-demo img{width:200px;}
+  </style>
+  
+  <script src="dist/jquery.min.js"></script>
+  <script src="dist/layer.js"></script>
+  
+  
+  
+</head>
+<body>
+
+<button data-method="setTop" class="layui-btn" onclick="windows()">多窗口模式，层叠置顶</button>
+
+<script>
+	
+function windows(){
+layer.ready(function(){ 
+  layer.open({
+    type: 2,
+    title: '在线音乐',
+    maxmin: true,
+    area: ['950px', '600px'],
+    content: 'https://www.xiami.com/play',
+    
+  });
+});
+}	
+</script>
+
+</body>
+</html>
